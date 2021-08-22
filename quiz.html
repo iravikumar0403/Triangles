@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+    
+    <head>
+        <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triangle Quiz`</title>
@@ -19,8 +19,13 @@
             <li class="menu-item"><a href="area.html">Calculate Area</a></li>
         </ul>
     </nav>
-    <main>
+    <section>
+        <div class="header">
+            <h1>Quiz on triangles</h1>
+            <p>For each correct answer you will get 1 point</p>
+        </div>
         <form id="quizForm">
+            <div id="output"></div>
             <div class="question-group">
                 <p class="question">1. Which of the following triangles are always similar?</p>
                 <label>
@@ -161,8 +166,7 @@
             </div>
             <button id="btn">Submit</button>
         </form>
-        <div id="output"></div>
-    </main>
+    </section>
     <script src="js/quiz.js"></script>
 </body>
 </html>

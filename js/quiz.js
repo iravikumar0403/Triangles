@@ -5,6 +5,7 @@ const outputEl = document.getElementById("output");
 const answers = ["Equilateral triangle", "90", "one right angle", "12, 16, 20", "Equilateral triangle", "0", "a + b + c", "45", "None", "85"]
 function checkAnswers(e){
     e.preventDefault()
+    window.scrollTo(0,0)
     let formResults = new FormData(quizForm);
     let score = 0;
     for (var p of formResults.entries()){
@@ -14,6 +15,11 @@ function checkAnswers(e){
         }
     }
     outputEl.innerText = "Your score is "  + score
+    if(score > 7){
+        outputEl.style.backgroundColor = "green"
+    }else{
+        outputEl.style.backgroundColor = "red"
+    }
 }
 
 btn.addEventListener("click", checkAnswers)
